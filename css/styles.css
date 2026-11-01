@@ -908,6 +908,8 @@ body.no-scroll { overflow: hidden; }
 }
 .contact-panel h2 { color: var(--white); font-size: 1.4rem; }
 .contact-panel a { color: var(--gold-light); }
+.contact-panel .btn--whatsapp,
+.contact-panel .btn--whatsapp:hover { color: var(--white); }
 .contact-panel .btn { margin-bottom: 0.75rem; }
 .contact-list { list-style: none; padding: 0; margin: 1.25rem 0 0; }
 .contact-list li {

@@ -4,7 +4,7 @@
    - Header shadow on scroll + back-to-top button
    - Smooth scroll for in-page links (respects reduced-motion)
    - Gallery lightbox
-   - Enquiry form: pre-fill from URL, placeholder-endpoint guard, AJAX submit
+   - Enquiry form: pre-fill room type from URL, placeholder-endpoint guard, AJAX submit
    ========================================================================== */
 (function () {
   "use strict";
@@ -171,16 +171,7 @@
     var status = document.getElementById("form-status");
     var params = new URLSearchParams(window.location.search);
 
-    // Pre-select property / room type when arriving from an "Enquire" button
-    var propertyParam = params.get("property");
-    if (propertyParam) {
-      var propertySelect = form.querySelector("#property");
-      if (propertySelect) {
-        Array.prototype.forEach.call(propertySelect.options, function (opt) {
-          if (opt.getAttribute("data-key") === propertyParam) propertySelect.value = opt.value;
-        });
-      }
-    }
+    // Pre-select the room type when arriving from an "Enquire" button
     var roomParam = params.get("room");
     if (roomParam) {
       var roomInput = form.querySelector('input[name="room_type"][value="' + (roomParam === "shared" ? "Shared room" : "Single room") + '"]');

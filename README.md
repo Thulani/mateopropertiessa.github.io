@@ -6,27 +6,26 @@ Plain HTML, CSS and a small amount of vanilla JavaScript. There's no build step,
 
 ---
 
-## Placeholders to replace
+## Live site
 
-Search the whole repository for each bracketed value and replace it. In VS Code, use **Edit → Replace in Files** (Ctrl/Cmd + Shift + H).
+**https://www.mateopropertiessa.co.za/**, served by GitHub Pages from the `main` branch (repository root). The `CNAME` file holds the custom domain; don't delete it.
 
-| Placeholder | Where | Notes |
-|---|---|---|
-| `[PROPERTY NAME]` | `properties.html` (3 cards), `contact.html` (property dropdown) | One per residence. Add or remove cards as needed. |
-| `[ADDRESS]` | `properties.html` | Street address of each residence. |
-| `[NEAREST CAMPUS]` | `properties.html` | e.g. "VUT main campus" or "Sedibeng College, Vanderbijlpark campus". |
-| `[PATRICK NUMBER]` | All pages | **Filled in from the business card: 073 723 3405.** Please verify. |
-| `[NOKUTHULA NUMBER]` | All pages | **Filled in from the business card: 081 804 4359.** Please verify. |
-| `[EMAIL]` | Footer of every page, `contact.html`, `privacy.html`, JSON-LD in `index.html` | The enquiries email address. |
-| `[WHATSAPP GROUP LINK]` | Footer, `index.html`, `contact.html` | **Filled in from the QR code on the business card:** `https://chat.whatsapp.com/EhBZCbNbRGr0KqjdTXfCkf`. Please confirm it's the right group. |
-| WhatsApp chat number | Header button on every page, plus other "WhatsApp us" buttons | Currently `https://wa.me/27737233405` (Patrick's number). To change it, replace `27737233405` everywhere, using international format with no `+`, spaces or leading `0`. |
-| `[FORMSPREE ENDPOINT]` | `contact.html` (the `<form action="…">`) | See **Contact form** below. |
-| `[SITE URL]` | `<head>` of every page (canonical + Open Graph), JSON-LD in `index.html` and `faq.html` | The full live URL **with a trailing slash**, e.g. `https://mateopropertiessa.co.za/`. Social previews only work once this is set. |
-| `[INFORMATION OFFICER NAME]`, `[DATE]`, `[RETENTION PERIOD…]`, `[FORM PROVIDER…]` | `privacy.html` | Complete these as part of the privacy notice review. |
-| Office hours | `contact.html` | Currently "To be confirmed". |
-| Logo and show room photos | `images/` | See `images/README.md`. |
+## Details still to add
 
-> The privacy notice (`privacy.html`) is a **draft**. Have it reviewed, complete the bracketed details, then delete the yellow "Draft for client review" banner at the top of the page.
+Anything that hasn't been confirmed by Mateo Properties has been left **off** the site rather than shown as a placeholder. Add these once confirmed:
+
+| Detail | Where to add it |
+|---|---|
+| Enquiry form endpoint | `contact.html`: replace `[FORMSPREE ENDPOINT]` in the `<form action="…">` (see **Contact form** below). Until then the form tells visitors to call or WhatsApp instead. |
+| Email address | Footer (every page), contact panel in `contact.html`, `privacy.html` ("Your rights"), and `"email"` in the JSON-LD in `index.html`. |
+| WhatsApp group link | Footer and contact panel, if wanted. |
+| Residence names, addresses and nearest campuses | `properties.html` currently describes the accommodation as a whole. Add a card per residence once the details are confirmed. |
+| Office hours | Contact panel in `contact.html`. |
+| Nokuthula's job title | Team cards in `index.html` and `contact.html`: add a `<p class="role">…</p>` under her name. |
+| Information Officer, retention period, form provider | `privacy.html`. The notice is marked as a draft until it has been reviewed. |
+| Show room photos and the original logo file | `images/` (see `images/README.md`). |
+
+**WhatsApp chat number:** the WhatsApp buttons open a chat with **073 723 3405** (Patrick, from the business card) via `https://wa.me/27737233405`. To use a different number, replace `27737233405` in every `.html` file. Use international format with no `+`, spaces or leading `0`.
 
 ---
 
@@ -37,7 +36,7 @@ Search the whole repository for each bracketed value and replace it. In VS Code,
 3. Under **Build and deployment**, set **Source** to **Deploy from a branch**.
 4. Set **Branch** to `main` and the folder to **`/ (root)`**, then click **Save**.
 5. Wait a minute or two. The live URL appears at the top of the Pages settings screen.
-6. Replace `[SITE URL]` (see above) with that URL and push again.
+6. If the site's address ever changes, update the `canonical`, `og:url` and `og:image` tags in each page's `<head>` and the URLs in the JSON-LD blocks.
 
 **Which URL will the site have?**
 
@@ -76,7 +75,7 @@ The form already includes a hidden `_subject` line and a `_gotcha` spam honeypot
 
 ```
 index.html        Home: hero, intro, features, room types, lease info, no-pets notice, team, JSON-LD
-properties.html   Property cards (no prices, "Contact us for availability and details")
+properties.html   Accommodation overview (no prices, "Contact us for availability and details")
 amenities.html    Living / Study and Wellness / Safety and Power / Water
 gallery.html      Building photos + show room placeholders, with lightbox
 contact.html      Enquiry form, WhatsApp, phone numbers, office address, team
@@ -94,7 +93,7 @@ The header and footer are copied into every HTML page so the site works without 
 
 ### Enquire buttons and the form
 
-"Enquire about this property" buttons link to `contact.html?property=1` (or `2`, `3`). The form uses this to pre-select the matching option via its `data-key` attribute. If you add a property, add a card in `properties.html` and a matching `<option data-key="4" …>` in `contact.html`.
+The room-type buttons on the home page link to `contact.html?room=single` or `?room=shared`, and the form pre-selects the matching room type.
 
 ### External resources
 

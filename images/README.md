@@ -11,10 +11,10 @@ To swap an image, **keep the same file name** and overwrite the file. No HTML ch
 | `logo-full.png` | Footer logo (mark + wordmark) | Extracted from the business card. Replace with a transparent PNG of the full logo, about 640 px wide. It sits on dark green, so it needs light-coloured artwork. |
 | `favicon.png` | Browser tab icon | Generated from the logo mark (64 × 64). |
 | `og-image.jpg` | Preview image when the site is shared on WhatsApp, Facebook, etc. | 1200 × 630, building photo + logo. |
-| `building-corner.jpg` | Home page intro, Residence 1 card, gallery, call-to-action backgrounds | Supplied photo. Cropped so the child standing on the pavement in the original isn't shown, and the car's number plate is blurred. |
-| `building-street.jpg` | Home hero background, Residence 2 card, gallery | Supplied photo. |
+| `building-corner.jpg` | Home page intro, gallery, call-to-action backgrounds | Supplied photo. Cropped so the child standing on the pavement in the original isn't shown, and the car's number plate is blurred. |
+| `building-street.jpg` | Home hero background, properties page, gallery | Supplied photo. |
 | `team-patrick.jpg`, `team-nokuthula.jpg` | Team cards on Home and Contact | Cropped from the business card. Replace with higher-resolution portraits (about 520 × 600 px, portrait orientation, face near the top) if available. |
-| `placeholder-room.svg` | "Show room photos coming soon" tiles in the gallery, Residence 3 card | Placeholder. |
+| `placeholder-room.svg` | "Show room photos coming soon" tiles in the gallery | Placeholder. |
 
 ## Adding show room photos
 
@@ -29,7 +29,7 @@ To swap an image, **keep the same file name** and overwrite the file. No HTML ch
 
 ## Property photos
 
-Each card in `properties.html` has its own `<img>`. Add one photo per residence (4:3 landscape works best, about 1200 × 900 px) and update the `src` and `alt`.
+`properties.html` shows one photo (`building-street.jpg`). When residence details are confirmed, add a card per residence with its own photo (4:3 landscape works best, about 1200 × 900 px).
 
 ## Photo tips
 
