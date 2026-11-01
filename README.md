@@ -22,7 +22,7 @@ Anything that hasn't been confirmed by Mateo Properties has been left **off** th
 | Residence names, addresses and nearest campuses | `properties.html` currently describes the accommodation as a whole. Add a card per residence once the details are confirmed. |
 | Office hours | Contact panel in `contact.html`. |
 | Nokuthula's job title | Team cards in `index.html` and `contact.html`: add a `<p class="role">…</p>` under her name. |
-| Information Officer, retention period, form provider | `privacy.html`. The notice is marked as a draft until it has been reviewed. |
+| Information Officer, retention period, form provider | `privacy.html`. It's worth having the notice reviewed by a legal adviser. |
 | Show room photos and the original logo file | `images/` (see `images/README.md`). |
 
 **WhatsApp chat number:** the WhatsApp buttons open a chat with **073 723 3405** (Patrick, from the business card) via `https://wa.me/27737233405`. To use a different number, replace `27737233405` in every `.html` file. Use international format with no `+`, spaces or leading `0`.
@@ -80,7 +80,7 @@ amenities.html    Living / Study and Wellness / Safety and Power / Water
 gallery.html      Building photos + show room placeholders, with lightbox
 contact.html      Enquiry form, WhatsApp, phone numbers, office address, team
 faq.html          FAQ (native <details> accordions) + FAQPage JSON-LD
-privacy.html      POPIA-aligned privacy notice (DRAFT)
+privacy.html      POPIA-aligned privacy notice
 404.html          Not-found page
 css/styles.css    All styles (mobile-first)
 js/main.js        Mobile menu, back-to-top, smooth scroll, lightbox, form handling

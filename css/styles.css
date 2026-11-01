@@ -972,18 +972,6 @@ body.no-scroll { overflow: hidden; }
 .prose h2 { font-size: 1.45rem; margin-top: 2.25rem; }
 .prose ul { padding-left: 1.25rem; }
 .prose li { margin-bottom: 0.4rem; }
-.draft-banner {
-  display: flex;
-  gap: 1rem;
-  align-items: flex-start;
-  background: #FFF4D6;
-  border: 2px dashed #B8860B;
-  border-radius: var(--radius);
-  padding: 1.1rem 1.25rem;
-  margin-bottom: 2rem;
-}
-.draft-banner i { color: #8A6D12; font-size: 1.4rem; margin-top: 0.15rem; }
-.draft-banner p { margin: 0; }
 
 /* ---------- 404 ---------- */
 .error-page { text-align: center; padding: 5rem 0; }
